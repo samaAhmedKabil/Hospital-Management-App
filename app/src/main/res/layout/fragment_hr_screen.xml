@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontalUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.0356341" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontalDown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.13" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/centerVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="205dp"
+        />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/notification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.04"
+        app:layout_constraintTop_toTopOf="@+id/horizontalUp"
+        app:layout_constraintWidth_percent="0.10" />
+
+    <ImageView
+        android:id="@+id/profilePic"
+        android:layout_width="78dp"
+        android:layout_height="76dp"
+        android:src="@drawable/default_profile_pic"
+        app:layout_constraintTop_toBottomOf="@id/horizontalUp"
+        app:layout_constraintBottom_toTopOf="@id/horizontalDown"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/profile_pic_frame"
+        />
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UserName"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@id/horizontalUp"
+        app:layout_constraintStart_toEndOf="@+id/profilePic"
+        android:layout_marginStart="15dp"
+        />
+    <TextView
+        android:id="@+id/specialistText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Specialist, "
+        android:textSize="18dp"
+        android:textColor="#22C7B8"
+        app:layout_constraintTop_toBottomOf="@id/userName"
+        app:layout_constraintStart_toEndOf="@+id/profilePic"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        />
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HR"
+        android:textSize="18dp"
+        android:textColor="#22C7B8"
+        app:layout_constraintTop_toBottomOf="@id/userName"
+        app:layout_constraintStart_toEndOf="@+id/specialistText"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:id="@+id/blue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/employee_square"
+        app:layout_constraintEnd_toEndOf="@+id/centerVertical"
+        app:layout_constraintHeight_percent="0.32"
+        app:layout_constraintTop_toTopOf="@+id/horizontalDown"
+        android:layout_marginTop="30dp"
+        app:layout_constraintWidth_percent="0.47" />
+
+    <TextView
+        android:id="@+id/callsIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/employee"
+        app:layout_constraintTop_toTopOf="@id/blue"
+        app:layout_constraintBottom_toBottomOf="@id/blue"
+        app:layout_constraintStart_toStartOf="@id/blue"
+        app:layout_constraintEnd_toEndOf="@id/blue"
+        android:layout_marginBottom="30dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Employee"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/blue"
+        app:layout_constraintStart_toStartOf="@+id/blue"
+        app:layout_constraintTop_toBottomOf="@+id/callsIcon"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:id="@+id/green"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/green_square"
+        app:layout_constraintHeight_percent="0.25"
+        app:layout_constraintStart_toStartOf="@+id/centerVertical"
+        app:layout_constraintTop_toTopOf="@+id/horizontalDown"
+        android:layout_marginTop="30dp"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <TextView
+        android:id="@+id/tasksIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tasks"
+        app:layout_constraintBottom_toBottomOf="@+id/green"
+        app:layout_constraintEnd_toEndOf="@+id/green"
+        app:layout_constraintStart_toStartOf="@+id/green"
+        app:layout_constraintTop_toTopOf="@+id/green"
+        android:layout_marginBottom="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tasks"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/tasksIcon"
+        app:layout_constraintStart_toStartOf="@+id/tasksIcon"
+        app:layout_constraintTop_toBottomOf="@+id/tasksIcon"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:id="@+id/skyBlue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/sky_blue_square"
+        app:layout_constraintHeight_percent="0.32"
+        app:layout_constraintStart_toStartOf="@+id/centerVertical"
+        app:layout_constraintTop_toBottomOf="@+id/green"
+        app:layout_constraintWidth_percent="0.45" />
+    <TextView
+        android:id="@+id/attendIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/finger_print"
+        app:layout_constraintBottom_toBottomOf="@+id/skyBlue"
+        app:layout_constraintEnd_toEndOf="@+id/skyBlue"
+        app:layout_constraintStart_toStartOf="@+id/skyBlue"
+        app:layout_constraintTop_toTopOf="@+id/skyBlue"
+        android:layout_marginBottom="40dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attendance-Leaving"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/attendIcon"
+        app:layout_constraintStart_toStartOf="@+id/attendIcon"
+        app:layout_constraintTop_toBottomOf="@+id/attendIcon"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:id="@+id/purple"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/purple_square"
+        app:layout_constraintEnd_toEndOf="@+id/centerVertical"
+        app:layout_constraintHeight_percent="0.25"
+        app:layout_constraintTop_toBottomOf="@+id/blue"
+        app:layout_constraintWidth_percent="0.47" />
+    <TextView
+        android:id="@+id/reportsIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/reports"
+        app:layout_constraintBottom_toBottomOf="@+id/purple"
+        app:layout_constraintEnd_toEndOf="@+id/purple"
+        app:layout_constraintStart_toStartOf="@+id/purple"
+        app:layout_constraintTop_toTopOf="@+id/purple"
+        android:layout_marginBottom="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reports"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/reportsIcon"
+        app:layout_constraintStart_toStartOf="@+id/reportsIcon"
+        app:layout_constraintTop_toBottomOf="@+id/reportsIcon"
+        android:layout_marginTop="10dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

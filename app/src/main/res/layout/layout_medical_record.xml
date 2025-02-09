@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/medicalRecordLayout"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.0356341"/>
+
+    <ImageView
+        android:id="@+id/arrow_back"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.09"
+        app:layout_constraintHeight_percent="0.03"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_up"
+        />
+    <TextView
+        android:id="@+id/select_doctor_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medical Records"
+        android:textColor="#343434"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/arrow_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/arrow_back"
+        app:layout_constraintTop_toTopOf="@id/arrow_back" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        tools:listitem="@layout/item_hor_with_x"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/select_doctor_text"/>
+    <EditText
+        android:id="@+id/addMeasurement"
+        android:layout_width="210dp"
+        android:layout_height="65dp"
+        android:background="@drawable/text_box"
+        app:layout_constraintTop_toBottomOf="@id/tabs"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="@id/tabs"
+        android:hint="Add Record"
+        android:textColorHint="#C3C3C3"
+        android:paddingStart="10dp"
+        android:drawableEnd="@drawable/plus_small"
+        android:paddingEnd="20dp"/>
+
+    <EditText
+        android:id="@+id/add_note"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.9"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_135"
+        app:layout_constraintTop_toBottomOf="@id/addMeasurement"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="@id/addMeasurement"
+        android:hint="Add Note"
+        android:paddingHorizontal="20dp"
+        android:gravity="top"
+        android:paddingVertical="15dp" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sendBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_button"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="30dp"
+        android:text="Send"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addAnalyst"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/add_nurse"
+        android:paddingStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Choose Analyst"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/add_note"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
