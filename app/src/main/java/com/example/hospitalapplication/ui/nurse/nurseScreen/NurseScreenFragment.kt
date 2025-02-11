@@ -55,7 +55,7 @@ class NurseScreenFragment:Fragment() {
         }
     }
     private fun onAttendClick() {
-        binding.green.setOnClickListener {
+        binding.skyBlue.setOnClickListener {
             findNavController().navigate(R.id.attendanceFragment)
         }
     }

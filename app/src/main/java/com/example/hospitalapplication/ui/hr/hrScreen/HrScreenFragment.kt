@@ -58,7 +58,7 @@ class HrScreenFragment: Fragment() {
         binding.userName.text = MySharedPreferences.getUserName()
     }
     private fun onAttendClick() {
-        binding.green.setOnClickListener {
+        binding.skyBlue.setOnClickListener {
             findNavController().navigate(R.id.attendanceFragment)
         }
     }
